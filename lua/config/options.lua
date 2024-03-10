@@ -6,3 +6,5 @@ vim.opt["colorcolumn"] = "120"
 vim.opt["relativenumber"] = true
 
 vim.opt.pumblend = 0 -- Remove transparency to autocomplete
+
+-- vim.g.autoformat = false 

@@ -6,6 +6,11 @@ return {
         ruby_ls = {
           mason = true,
         },
+        solargraph = {
+          -- mason = false,
+          autoformat = false,
+          diagnostic = false
+        },
       },
     },
   },
