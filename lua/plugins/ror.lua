@@ -1,18 +1,44 @@
 return {
   {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "ruby",
+      })
+    end,
+  },
+  {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
         ruby_ls = {
           mason = true,
         },
-        solargraph = {
-          mason = false,
-          autoformat = false,
-          diagnostic = false,
-        },
+        -- solargraph = {
+        --   mason = false,
+        --   autoformat = false,
+        --   diagnostic = false,
+        -- },
       },
     },
+  },
+  {
+    "nvim-neotest/neotest",
+    -- optional = true,
+    dependencies = {
+      "olimorris/neotest-rspec",
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rspec"),
+        },
+      })
+    end,
   },
   {
     "folke/which-key.nvim",
