@@ -7,9 +7,9 @@ return {
           mason = true,
         },
         solargraph = {
-          -- mason = false,
+          mason = false,
           autoformat = false,
-          diagnostic = false
+          diagnostic = false,
         },
       },
     },
