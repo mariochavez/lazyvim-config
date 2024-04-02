@@ -97,11 +97,11 @@ return {
             add_ruby_deps_command(client, buffer)
           end,
         },
-        -- solargraph = {
-        --   mason = false,
-        --   autoformat = false,
-        --   diagnostic = false,
-        -- },
+        solargraph = {
+          mason = true,
+          autoformat = false,
+          diagnostic = false,
+        },
       },
     },
   },
